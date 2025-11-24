@@ -54,7 +54,7 @@
   border-radius: 2rem;
 }
 .email-component {
-   outline: none;
+  outline: none;
   padding: 0.5rem 0.75rem;
   font-size: var(--text-sm);
   background-color: transparent;
@@ -85,15 +85,15 @@
   z-index: 3;
   background-color: var(--color-white);
 }
-li{
+li {
   list-style: none;
   position: relative;
   padding-bottom: 0.25rem;
   cursor: pointer;
 }
-a{
+a {
   text-decoration: none;
- color: var(--color-secondary);
+  color: var(--color-secondary);
 }
 li::before {
   content: "";
@@ -107,14 +107,13 @@ li::before {
   transform-origin: left center;
   transition: transform 250ms ease;
 }
-li:hover a{
+li:hover a {
   color: var(--color-secondary-orange);
 }
 li:hover::before,
 li:focus-within::before {
   transform: scaleX(1);
   background: var(--color-secondary-orange);
-
 }
 .logo {
   font-family: Arial, italic;
@@ -162,7 +161,6 @@ li:focus-within::before {
   grid-auto-flow: column;
   grid-template-columns: auto;
   grid-gap: 0 2rem;
-
   padding: 30px 60px;
   padding-right: 0;
 }
@@ -194,7 +192,7 @@ li:focus-within::before {
   background-color: var(--color-white-gray);
   border-radius: 1rem;
 }
-.card-product .cover img{
+.card-product .cover img {
   height: 100%;
   min-height: 12rem;
   object-fit: cover;
@@ -365,8 +363,9 @@ li:focus-within::before {
 }
 .container-tech {
   background-color: var(--color-black);
-  border-radius: 1rem;
-  padding: 1rem;
+  border-radius: 3rem;
+  overflow: hidden;
+  padding: 4rem;
   color: var(--color-primary);
 }
 .container-tech .title {
@@ -384,34 +383,47 @@ li:focus-within::before {
   margin-bottom: 1rem;
 }
 
-.prew img,
-.current img {
+.item-slide img {
   width: 100%;
   height: auto;
   object-fit: cover;
+  border-radius: 1rem;
+  overflow: hidden;
 }
-.prew {
+
+.item-slide {
   width: 15rem;
   border-radius: 1rem;
   overflow: hidden;
+  flex-shrink: 0; /* que no se estire */
+  transition: 800ms;
 }
-.current {
-  width: 50rem;
-  border-radius: 1rem;
-  overflow: hidden;
+.active {
+  width: 45rem;
+  max-width: 45dvw;
+  transition: 800ms;
 }
 .slide {
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto;
+  grid-gap: 0 8rem;
+  padding-right: 0;
+  align-items: end;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  height: max-content;
 }
-.description {
+.container-tech .description {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin-top: 1rem;
   justify-content: space-around;
+  position: absolute;
+  width: 30%;
 }
 .container-support {
   display: flex;
@@ -516,35 +528,7 @@ li:focus-within::before {
   padding: 1.5rem;
   gap: 1rem;
 }
-.poster {
-  border-radius: 2rem;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.poster img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  top: 0;
-  z-index: 0;
-}
-.poster h3,
-.poster p {
-  font-family: "Poppins-ExtraLight";
-}
-.poster .details {
-  position: absolute;
-  z-index: 2;
-  justify-content: space-between;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-  padding: 1rem;
-}
+
 .see-more {
   display: flex;
   justify-content: space-between;
@@ -573,7 +557,7 @@ li:focus-within::before {
   gap: 1rem;
 }
 .contact .container-nav li a {
-   color: var(--color-primary) !important;
+  color: var(--color-primary) !important;
 }
 .details h3 {
   line-height: normal !important;
@@ -583,13 +567,78 @@ li:focus-within::before {
   flex-direction: column;
   gap: 1rem;
 }
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+.slider-poster {
+  .slide-track {
+    animation: scroll linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+  }
+  .poster {
+    border-radius: 2rem;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    z-index: 0;
+  }
+  .poster h3,
+  .poster p {
+    font-family: "Poppins-ExtraLight";
+  }
+  .poster .details {
+    position: absolute;
+    z-index: 2;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+.slider-poster::before,
+.slider-poster::after {
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider-poster::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider-poster::before {
+  left: 0;
+  top: 0;
+}
+
 @media (max-width: 600px) {
   .contact .details {
     display: flex;
     flex-direction: column;
   }
   .item-details {
-  flex-direction: row;
+    flex-direction: row;
   }
   .search-component {
     width: 7rem;
@@ -607,14 +656,29 @@ li:focus-within::before {
     width: 12rem;
   }
   .current {
-    width: 100%;
+    width: auto;
+    height: 12rem;
   }
   .slide {
-    flex-direction: column;
+    /* flex-direction: column; */
+    overflow-x: hidden;
+    overflow-y: scroll;
+    grid-auto-flow: row;
+    grid-template-rows: auto;
+    max-height: calc(24rem + 3rem);
+    grid-gap: 1rem 0;
+    /* grid-gap: 0 2rem;
+  padding: 30px 60px;
+  padding-right: 0; */
   }
   .description {
     justify-content: center;
     align-items: center;
+  }
+  .container-tech .description {
+    position: relative;
+    max-width: auto;
+    width: auto;
   }
   .resume {
     text-align: center;
@@ -645,7 +709,6 @@ li:focus-within::before {
     flex-direction: column;
     grid-template-columns: 1fr;
   }
-  
 }
 @media (max-width: 800px) {
   .poster {
@@ -660,8 +723,7 @@ li:focus-within::before {
     gap: 3rem;
   }
   .nav {
-  display: grid;
-  grid-template-columns: auto 1fr 8rem;
-
-}
+    display: grid;
+    grid-template-columns: auto 1fr 8rem;
+  }
 }
