@@ -14,6 +14,9 @@
 <body>
     <div class="container-form">
         <div class="card">
+                <a class="back" href="javascript:history.back()">
+              <img src="./assets/flecha-blanca-isq.svg" class="btnPrev" alt="" />
+            </a>
             <div class="content-form">
                 <div class="logo">
                     <label> NOS </label>
@@ -21,11 +24,11 @@
                 <h2>Iniciar sesión</h2>
                 <form class="items-form">
 
-                    <input type="email" class="input-component" color="black2" placeholder="Email address" required
+                    <input type="email" class="input-component" color="black2" placeholder="Correo" required
                         minlength="6" />
                     <div class="password-container">
 
-                        <input type="password" class="input-component" color="black2" placeholder="Password" required
+                        <input type="password" class="input-component" color="black2" placeholder="Contraseña" required
                             minlength="6" id="password-input" />
                         <button class="show-password" id="show-password" type="button">
                             <img src="./assets/eye1.svg" alt="" class="icon-password show" />
@@ -44,6 +47,7 @@
                     <a href="login.html"><input type="submit" value="Iniciar sesión" color="white"></a>
                 </form>
                 <small>¿No tienes cuenta? <a href="register.html">Regístrate aquí</a></small>
+                
             </div>
         </div>
 </body>
@@ -54,7 +58,6 @@
     const passwordInput = document.querySelector('input[type="password"]');
     let showPassword = false;
     showPasswordCheckbox.onclick = function () {
-        console.log(showPassword);
         if (showPassword) {
             passwordInput.type = 'password';
             showIcon.style.display = 'none';
@@ -67,24 +70,31 @@
         showPassword = !showPassword;
     }
 
+   
     const loginForm = document.querySelector('.items-form');
     const emailInput = document.querySelector('input[type="email"]');
     const messageDisplay = document.querySelector('.error-message');
 
+   
     loginForm.addEventListener('submit', (e) => {
-        console.log(emailInput.value, passwordInput.value);
+       
         e.preventDefault();
 
         const email = emailInput.value;
         const password = passwordInput.value;
 
+       
         messageDisplay.textContent = '';
 
+       
+       
+       
 
         if (email === "marlon@gmail.com" && password === "password") {
 
+           
 
-
+           
             const sessionToken = `fake_auth_token_${Date.now()}`;
 
             const userSession = {
@@ -92,18 +102,29 @@
                 username: email.split('@')[0],
                 email: email,
                 token: sessionToken,
-                loginTime: new Date().toISOString()
             };
 
+           
+           
             localStorage.setItem('userSessionToken', sessionToken);
             localStorage.setItem('userProfile', JSON.stringify(userSession));
 
+           
+
+           
+
+           
             setTimeout(() => {
-                window.location.href = "/index.html"; 
+                window.location.href = "/index.html";
+
+               
+               
+               
 
             }, 1000);
 
         } else {
+           
             messageDisplay.textContent = "Error de autenticación. Credenciales incorrectas.";
         }
     });

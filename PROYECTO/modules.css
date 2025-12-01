@@ -1,9 +1,9 @@
 .banner {
   background-color: var(--color-secondary);
   width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 4;
+  position: fixed;
+  top: 0;
+  z-index: 4;
   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
 }
 .cart-portrait {
@@ -67,7 +67,6 @@
   border-radius: 2rem;
 }
 
-
 .search-component::placeholder {
   color: var(--color-secondary-gray);
   opacity: 1;
@@ -94,8 +93,8 @@
 .header {
   display: flex;
   flex-direction: column;
-  
-    z-index: 3;
+
+  z-index: 3;
 }
 .user-module,
 .guest-module {
@@ -111,42 +110,7 @@
 }
 
 .guest-module {
-  gap: .5rem;
-}
-
-li {
-  list-style: none;
-  position: relative;
-  padding-bottom: 0.25rem;
-  cursor: pointer;
-}
-
-a {
-  text-decoration: none;
-  color: var(--color-secondary);
-}
-
-li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 0.1rem;
-  background: #000;
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform 250ms ease;
-}
-
-li:hover a {
-  color: var(--color-secondary-orange);
-}
-
-li:hover::before,
-li:focus-within::before {
-  transform: scaleX(1);
-  background: var(--color-secondary-orange);
+  gap: 0.5rem;
 }
 
 .logo {
@@ -171,15 +135,8 @@ li:focus-within::before {
   max-width: 100%;
   overflow: hidden;
   left: 50%;
-  gap: .5rem;
+  gap: 0.5rem;
   transform: translate(-50%, -50%);
-}
-
-.container-nav-mobile li {
-  align-items: center;
-  display: flex;
-
-  gap: 0.2rem;
 }
 
 .container-search {
@@ -191,7 +148,7 @@ li:focus-within::before {
 
 .icon {
   position: absolute;
-  top: .5rem;
+  top: 0.5rem;
   right: 0.5rem;
 }
 
@@ -200,72 +157,11 @@ li:focus-within::before {
   height: auto;
   object-fit: cover;
 }
-  .down {
-    animation: fadedown both;
-    animation-timeline: view(10% 2%);
-    animation-delay: 6s;
-  }
-.right {
-  animation: faderight both;
-  animation-timeline: view(70% 15%);
-}
-.startDown {
-  animation: 600ms linear 0.1s lineardown;
-}
-@keyframes faderight {
-  0% {
-    transform: translateX(10%);
-    opacity: 0;
-  }
 
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-  @keyframes fadedown {
-    0% {
-      transform: translateY(20rem) scale(0.3);
-    }
-
-    100% {
-      transform: translateY(0) scale(1);
-    }
-  }
-  @keyframes lineardown {
-    0% {
-      transform: translateY(5rem) ;
-      opacity: 0;
-    }
-
-    100% {
-      transform: translateY(0) ;
-      opacity: 1;
-    }
-  }
 .container-paragraph div {
   max-width: 80%;
 }
-@keyframes autoBlurMotion {
-  0% {
-    filter: blur(1.5rem);
-    transform: translateY(1.75rem);
-  }
 
-  45% {
-    transform: translateY(1.25rem);
-  }
-
-  100% {
-    transform: translateY(0);
-    filter: blur(0);
-  }
-}
-.blur {
-  animation: autoBlurMotion linear both;
-  animation-timeline: view();
-  animation-range: entry 30% cover 50%;
-}
 .container-paragraph {
   position: relative;
   display: flex;
@@ -365,16 +261,6 @@ li:focus-within::before {
   position: relative;
 }
 
-.column-elements .text {
-  width: min-content;
-  position: relative;
-  z-index: 2;
-  animation: changecolor linear forwards;
-  animation-timeline: view();
-  animation-range: cover 40% cover 60%;
-  color: var(--color-secondary-gray3);
-}
-
 .container-questions {
   background-color: var(--color-white-gray);
   padding: 3rem 2rem;
@@ -397,7 +283,6 @@ li:focus-within::before {
 }
 
 .desc-question {
-  /* height: 0; */
   overflow: hidden;
   transition: all 0.3s ease;
   display: flex;
@@ -415,145 +300,6 @@ li:focus-within::before {
 
 .btn-question {
   cursor: pointer;
-
-}
-
-@keyframes changecolor {
-  0% {
-    color: var(--color-secondary-gray3);
-  }
-
-  50% {
-    color: var(--color-secondary-orange);
-  }
-
-  100% {
-    color: var(--color-secondary-gray3);
-  }
-}
-
-.text::before {
-  position: absolute;
-  content: attr(data-word);
-  color: var(--color-secondary-orange);
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 80%;
-  opacity: 0;
-  margin-right: 4rem;
-  z-index: 1;
-  animation: textApeeringRight linear forwards;
-  animation-timeline: view();
-  animation-range: cover 40% cover 60%;
-}
-
-.text::after {
-  position: absolute;
-  content: attr(data-word);
-  color: var(--color-secondary-orange);
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 80%;
-  opacity: 0;
-  margin-left: 4rem;
-  transition: all 0.3s ease;
-  z-index: 1;
-  animation: textApeeringLeft linear forwards;
-  animation-timeline: view();
-  animation-range: cover 40% cover 60%;
-}
-
-@keyframes textApeeringLeft {
-  0% {
-    left: 80%;
-    opacity: 0;
-  }
-
-  50% {
-    left: 100%;
-    opacity: 1;
-  }
-
-  100% {
-    left: 80%;
-    opacity: 0;
-  }
-}
-
-@keyframes textApeeringRight {
-  0% {
-    right: 80%;
-    opacity: 0;
-  }
-
-  50% {
-    right: 100%;
-    opacity: 1;
-  }
-
-  100% {
-    right: 80%;
-    opacity: 0;
-  }
-}
-
-@keyframes imageBouncing {
-  0% {
-    transform: rotate(0deg);
-    opacity: 0;
-    right: 0%;
-    bottom: 30%;
-  }
-
-  20% {
-    transform: rotate(25deg);
-    opacity: 0.6;
-    right: -30%;
-    bottom: 40%;
-  }
-
-  30% {
-    transform: rotate(15deg);
-    opacity: 0.8;
-  }
-
-  50% {
-    transform: rotate(20deg);
-    right: -30%;
-    bottom: 40%;
-    opacity: 1;
-  }
-
-  90% {
-    transform: rotate(20deg);
-    right: -30%;
-    bottom: 40%;
-    opacity: 1;
-  }
-
-  100% {
-    transform: rotate(0deg);
-    opacity: 0;
-    right: 0%;
-    bottom: 30%;
-  }
-}
-
-.float-image {
-  position: absolute;
-  opacity: 0;
-  right: 0%;
-  bottom: 30%;
-  transform: rotate(0deg);
-  transform-origin: center center;
-  z-index: 0;
-
-  will-change: transform, opacity;
-  animation: imageBouncing linear forwards;
-  animation-timeline: view();
-  animation-range: cover 50% cover 70%;
 }
 
 .float-image img {
@@ -578,7 +324,6 @@ li:focus-within::before {
   align-items: center;
 }
 
-
 .container-tech h1 {
   color: var(--color-primary);
   margin-bottom: 1rem;
@@ -594,7 +339,6 @@ li:focus-within::before {
   opacity: 1;
   transform: translateY(0);
   transition: 400ms;
-
 }
 
 .tech-resume-gonna-change {
@@ -622,7 +366,6 @@ li:focus-within::before {
 }
 
 .item-slide {
-
   flex: 0 0 calc((75%) * 0.3);
   height: 300px;
 
@@ -800,8 +543,6 @@ li:focus-within::before {
   color: var(--color-secondary);
 }
 
-
-
 .icon-putter {
   width: auto;
   height: 1.5rem;
@@ -819,10 +560,6 @@ li:focus-within::before {
   gap: 1rem;
 }
 
-.contact .container-nav li a {
-  color: var(--color-primary) !important;
-}
-
 .details h3 {
   line-height: normal !important;
 }
@@ -836,7 +573,7 @@ li:focus-within::before {
 .slider-poster {
   position: relative;
   overflow: hidden;
-  /* width: 100%; */
+
   border-radius: 1.5rem;
   width: 25vw;
   height: 100%;
@@ -854,7 +591,6 @@ li:focus-within::before {
   scrollbar-width: none;
 
   -ms-overflow-style: none;
-
 }
 
 .poster {
@@ -882,7 +618,6 @@ li:focus-within::before {
   display: flex;
 }
 
-
 @media (max-width: 900px) {
   .poster img {
     width: calc(100vw - 5.5rem);
@@ -904,15 +639,13 @@ li:focus-within::before {
 
   .container-nav-mobile {
     display: flex;
-
-
   }
   .column-elements {
     gap: 2rem;
   }
 
   .icon {
-    top: .2rem;
+    top: 0.2rem;
   }
 
   .mobile {
@@ -920,7 +653,6 @@ li:focus-within::before {
   }
 
   .slider-poster {
-
     width: auto;
   }
 
@@ -954,8 +686,6 @@ li:focus-within::before {
   .container-paragraph div {
     max-width: 90%;
   }
-
-
 
   .description {
     justify-content: center;
@@ -1006,11 +736,9 @@ li:focus-within::before {
   .container-tech {
     overflow: hidden;
     width: 100%;
-
   }
 
   .slide {
-
     flex-direction: column;
 
     overflow-x: hidden;
@@ -1018,32 +746,29 @@ li:focus-within::before {
 
     height: 60dvh;
 
-
     align-items: stretch;
     scroll-snap-type: y mandatory;
 
     gap: 2rem;
   }
 
-  .slide> :first-child {
-
+  .slide > :first-child {
     visibility: hidden;
     display: none;
   }
 
-
   .item-slide {
- 
     width: 80%;
     margin: 0 auto;
-    height: auto;
 
+    height: auto;
 
     flex: 0 0 25%;
   }
 
   .active {
     width: 100%;
+
     height: auto;
 
     flex: 0 0 70%;

@@ -6,6 +6,7 @@
     padding: var(--text-md);
     background-color: var(--color-secondary);
     padding: 2rem 4rem;
+    position: relative;
 }
 
 .items-form {
@@ -72,6 +73,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    
     height: 100%;
 }
 
@@ -94,6 +96,7 @@
     z-index: 3;
     cursor: pointer;
 
+    
 }
 
 .icon-password {

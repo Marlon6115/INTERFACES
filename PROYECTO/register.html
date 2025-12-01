@@ -14,19 +14,24 @@
 <body>
     <div class="container-form">
         <div class="card">
+            <a class="back" href="javascript:history.back()">
+              <img src="./assets/flecha-blanca-isq.svg" class="btnPrev" alt="" />
+            </a>
             <div class="content-form">
                 <div class="logo">
                     <label> NOS </label>
                 </div>
                 <h2>Registro</h2>
-                <form class="items-form">
-
+                <form class="items-form" id="register-form">
                     <input type="text" class="input-component" color="black2" placeholder="Nombres" required
                         minlength="6" maxlength="50" />
                     <input type="text" class="input-component" color="black2" placeholder="Apellidos" required
                         minlength="6" maxlength="50" />
                     <input type="text" class="input-component" color="black2" placeholder="Usuario" required
                         minlength="6" maxlength="50" />
+                        <input type="email" class="input-component" color="black2" placeholder="Correo" required
+                        minlength="6" />
+                    
                     <div class="password-container">
 
                         <input type="password" class="input-component" id="show-password-1" color="black2"
@@ -50,10 +55,11 @@
                         </button>
 
                     </div>
-                     <small class="error-message" ></small>
+                    <small class="error-message"></small>
                     <a href="login.html"><input type="submit" value="Registrarse" color="white"></a>
                 </form>
                 <small>¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a></small>
+                
             </div>
         </div>
 </body>
@@ -66,7 +72,6 @@
         let showPassword = false;
         const passwordInput = document.getElementById(`show-password-${button.id}`);
         button.onclick = () => {
-            console.log(showPassword);
             if (showPassword) {
                 passwordInput.type = 'password';
                 button.querySelector('.show').style.display = 'none';
@@ -82,7 +87,7 @@
 
     const password = document.getElementById('show-password-1');
     const confirmPassword = document.getElementById('show-password-2');
-    const form = document.querySelector('items-form');
+    const formRegister = document.getElementById('register-form');
     const errorMsg = document.querySelector('.error-message');
 
     function validarCoincidencia() {
@@ -97,13 +102,13 @@
 
     confirmPassword.addEventListener('input', validarCoincidencia);
 
-    form.addEventListener('submit', (e) => {
-        validarCoincidencia();
-
-        if (!form.checkValidity()) {
-            e.preventDefault();
+    formRegister.addEventListener('submit', (e) => {
+        e.preventDefault();
+        validarCoincidencia(); 
+        if (formRegister.checkValidity()) {
+            window.location.href = "login.html";
         } else {
-            console.log("Formulario válido. Enviando datos...");
+            return false;
         }
     });
 </script>

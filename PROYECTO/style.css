@@ -21,20 +21,20 @@
   --breakpoint-lg: 1150px;
   --breakpoint-xl: 1400px;
 
-  --text-xs: 0.75rem; /* 12px */
-  --text-sm: 0.875rem; /* 14px */
-  --text-base: 1rem; /* 16px */
-  --text-md: 1.125rem; /* 18px */
-  --text-lg: 1.5rem; /* 24px */
-  --text-xl: 1.875rem; /* 30px */
-  --text-2xl: 2.5rem; /* 40px */
-  --text-3xl: 2.875rem; /* 46px */
-  --text-4xl: 3.25rem; /* 52px */
-  --text-5xl: 3.5rem; /* 56px */
-  --text-6xl: 4.5rem; /* 72px */
-  --text-7xl: 5.25rem; /* 84px */
-  --text-8xl: 5.5rem; /* 88px */
-  --text-9xl: 11rem; /* 190px */
+  --text-xs: 0.75rem; 
+  --text-sm: 0.875rem; 
+  --text-base: 1rem; 
+  --text-md: 1.125rem; 
+  --text-lg: 1.5rem; 
+  --text-xl: 1.875rem; 
+  --text-2xl: 2.5rem; 
+  --text-3xl: 2.875rem; 
+  --text-4xl: 3.25rem; 
+  --text-5xl: 3.5rem; 
+  --text-6xl: 4.5rem; 
+  --text-7xl: 5.25rem; 
+  --text-8xl: 5.5rem; 
+  --text-9xl: 11rem; 
 }
 * {
   margin: 0;

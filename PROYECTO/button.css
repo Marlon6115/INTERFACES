@@ -1,6 +1,7 @@
 @import url("style.css");
 
-button,  input[type="submit"]{
+button,
+input[type="submit"] {
   background-color: var(--color-black);
   color: var(--color-primary);
   border: none;
@@ -11,10 +12,19 @@ button,  input[type="submit"]{
   border-radius: 5rem;
   width: min-content;
   white-space: nowrap;
-  font-family: 'Poppins', sans-serif v;
+  font-family: "Poppins", sans-serif v;
   transition: 400ms;
 }
-
+.back {
+  position: absolute;
+  left: 2rem;
+  top: 1.5rem;
+}
+.back img{
+  height: 1.5rem;
+  width: auto;
+  object-fit: cover;
+}
 button:hover {
   opacity: 0.9;
 }
@@ -37,15 +47,15 @@ input[color="white"] {
 }
 
 button[color="white2"] {
-  padding: .5rem 1rem;
-  border: .1rem solid var(--color-secondary-gray);
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid var(--color-secondary-gray);
   font-size: var(--text-sm);
   display: flex;
   align-items: center;
 }
 button[color="gray2"] {
-  padding: .5rem 1rem;
-  border-bottom: .2rem solid var(--color-secondary-orange);
+  padding: 0.5rem 1rem;
+  border-bottom: 0.2rem solid var(--color-secondary-orange);
   font-size: var(--text-sm);
   display: flex;
   align-items: center;
@@ -55,7 +65,7 @@ button[color="gray2"] {
 }
 
 button[color="white2"] img {
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   object-fit: cover;
   transform: rotate(180deg);
   height: auto;
@@ -82,9 +92,55 @@ button[size="large"] {
   padding: 16px 32px;
 }
 
+li {
+  list-style: none;
+  position: relative;
+  padding-bottom: 0.25rem;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-secondary);
+}
+
+li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0.1rem;
+  background: #000;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 250ms ease;
+}
+
+li:hover a {
+  color: var(--color-secondary-orange);
+}
+
+li:hover::before,
+li:focus-within::before {
+  transform: scaleX(1);
+  background: var(--color-secondary-orange);
+}
+
+.container-nav-mobile li {
+  align-items: center;
+  display: flex;
+
+  gap: 0.2rem;
+}
+
+.contact .container-nav li a {
+  color: var(--color-primary) !important;
+}
+
 @media (max-width: 900px) {
   button {
-    padding: .5rem ;
-    font-size: .75rem !important;
+    padding: 0.5rem;
+    font-size: 0.75rem !important;
   }
 }
