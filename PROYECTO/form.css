@@ -1,0 +1,121 @@
+.card {
+    box-shadow: 1rem 1rem 2rem var(--color-secondary-gray2);
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    padding: var(--text-md);
+    background-color: var(--color-secondary);
+    padding: 2rem 4rem;
+}
+
+.items-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+}
+
+.items-form input {
+    width: 100%;
+}
+
+.items-form a {
+    margin-top: 2rem;
+}
+
+.content-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: var(--color-primary);
+}
+
+.content-form small a {
+    color: var(--color-secondary-orange3);
+}
+
+.password-container button {
+    background-color: transparent !important;
+}
+
+.password-recover {
+
+    text-align: end;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+}
+
+.password-recover div {
+    display: flex;
+    gap: .5rem;
+}
+
+.password-recover input[type="checkbox"] {
+    width: 1rem;
+}
+.password-recover small a,
+.error-message {
+    color: var(--color-secondary-gray2);
+    text-align: end;
+}
+
+.container-form h2 {
+    color: var(--color-primary);
+}
+
+.container-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: min-content;
+}
+
+.password-container {
+    position: relative;
+}
+
+.show-password {
+    position: absolute;
+    right: .2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    cursor: pointer;
+
+}
+
+.icon-password {
+    width: 1rem;
+    height: 1rem;
+    right: .5rem;
+    bottom: 50%;
+    transform: translateY(50%);
+    position: absolute;
+
+}
+
+.input-component {
+    position: relative;
+    outline: none;
+    padding: 0.5rem 0.75rem;
+    font-size: var(--text-sm);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--color-secondary-gray2);
+    transition: 200ms ease;
+    appearance: none;
+    height: min-content;
+    color: var(--color-primary);
+}

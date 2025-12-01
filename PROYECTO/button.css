@@ -1,7 +1,6 @@
-
 @import url("style.css");
 
-button {
+button,  input[type="submit"]{
   background-color: var(--color-black);
   color: var(--color-primary);
   border: none;
@@ -13,6 +12,7 @@ button {
   width: min-content;
   white-space: nowrap;
   font-family: 'Poppins', sans-serif v;
+  transition: 400ms;
 }
 
 button:hover {
@@ -25,13 +25,17 @@ button:active {
 
 button[color="white"]:hover {
   background-color: var(--color-secondary-gray2);
+  transition: 400ms;
 }
+
 button[color="white"],
-button[color="white2"] {
+button[color="white2"],
+input[color="white"] {
   background-color: var(--color-white);
   color: var(--color-secondary);
   font-size: var(--text-normal);
 }
+
 button[color="white2"] {
   padding: .5rem 1rem;
   border: .1rem solid var(--color-secondary-gray);
@@ -39,6 +43,17 @@ button[color="white2"] {
   display: flex;
   align-items: center;
 }
+button[color="gray2"] {
+  padding: .5rem 1rem;
+  border-bottom: .2rem solid var(--color-secondary-orange);
+  font-size: var(--text-sm);
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 0;
+  color: var(--color-secondary-gray);
+}
+
 button[color="white2"] img {
   margin-left: .5rem;
   object-fit: cover;
@@ -46,10 +61,12 @@ button[color="white2"] img {
   height: auto;
   width: var(--text-base);
 }
+
 button[color="gray"] {
   background-color: var(--color-secondary-gray2);
   color: var(--color-secondary);
 }
+
 button[color="black2"] {
   background-color: transparent;
   border: 0.1rem solid var(--color-secondary-gray);
@@ -65,3 +82,9 @@ button[size="large"] {
   padding: 16px 32px;
 }
 
+@media (max-width: 900px) {
+  button {
+    padding: .5rem ;
+    font-size: .75rem !important;
+  }
+}

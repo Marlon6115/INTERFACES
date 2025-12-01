@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="modules.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="button.css">
+</head>
+
+<body>
+    <div class="container-form">
+        <div class="card">
+            <div class="content-form">
+                <div class="logo">
+                    <label> NOS </label>
+                </div>
+                <h2>Registro</h2>
+                <form class="items-form">
+
+                    <input type="text" class="input-component" color="black2" placeholder="Nombres" required
+                        minlength="6" maxlength="50" />
+                    <input type="text" class="input-component" color="black2" placeholder="Apellidos" required
+                        minlength="6" maxlength="50" />
+                    <input type="text" class="input-component" color="black2" placeholder="Usuario" required
+                        minlength="6" maxlength="50" />
+                    <div class="password-container">
+
+                        <input type="password" class="input-component" id="show-password-1" color="black2"
+                            placeholder="Contraseña" required minlength="8" id="password-input" maxlength="50"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            title="Debe contener al menos un número, una mayúscula y una minúscula, y al menos 8 caracteres." />
+                        <button class="show-password" type="button" id="1">
+                            <img src="./assets/eye1.svg" alt="" class="icon-password show" />
+                            <img src="assets/eye2.svg" class="icon-password hidden" alt="">
+                        </button>
+
+                    </div>
+                    <div class="password-container">
+
+                        <input type="password" class="input-component" id="show-password-2" color="black2"
+                            placeholder="Confirmar contraseña" required minlength="8" id="password-input"
+                            maxlength="50" />
+                        <button class="show-password" type="button" id="2">
+                            <img src="./assets/eye1.svg" alt="" class="icon-password show" />
+                            <img src="assets/eye2.svg" class="icon-password hidden" alt="">
+                        </button>
+
+                    </div>
+                     <small class="error-message" ></small>
+                    <a href="login.html"><input type="submit" value="Registrarse" color="white"></a>
+                </form>
+                <small>¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a></small>
+            </div>
+        </div>
+</body>
+<script>
+    const showPasswordCheckbox = document.querySelectorAll('.show-password');
+
+
+
+    showPasswordCheckbox.forEach(button => {
+        let showPassword = false;
+        const passwordInput = document.getElementById(`show-password-${button.id}`);
+        button.onclick = () => {
+            console.log(showPassword);
+            if (showPassword) {
+                passwordInput.type = 'password';
+                button.querySelector('.show').style.display = 'none';
+                button.querySelector('.hidden').style.display = 'block';
+            } else {
+                passwordInput.type = 'text';
+                button.querySelector('.show').style.display = 'block';
+                button.querySelector('.hidden').style.display = 'none';
+            }
+            showPassword = !showPassword;
+        }
+    });
+
+    const password = document.getElementById('show-password-1');
+    const confirmPassword = document.getElementById('show-password-2');
+    const form = document.querySelector('items-form');
+    const errorMsg = document.querySelector('.error-message');
+
+    function validarCoincidencia() {
+        if (password.value !== confirmPassword.value) {
+            confirmPassword.setCustomValidity("Las contraseñas no coinciden.");
+            errorMsg.textContent = "Error: Las contraseñas no coinciden.";
+        } else {
+            confirmPassword.setCustomValidity('');
+            errorMsg.textContent = "";
+        }
+    }
+
+    confirmPassword.addEventListener('input', validarCoincidencia);
+
+    form.addEventListener('submit', (e) => {
+        validarCoincidencia();
+
+        if (!form.checkValidity()) {
+            e.preventDefault();
+        } else {
+            console.log("Formulario válido. Enviando datos...");
+        }
+    });
+</script>
+
+</html>

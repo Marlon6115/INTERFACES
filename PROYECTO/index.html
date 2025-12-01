@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page Modular</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="button.css" />
-    <link rel="stylesheet" href="modules.css" />
-    <link rel="stylesheet" href="container-styles.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page Modular</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="button.css" />
+  <link rel="stylesheet" href="modules.css" />
+  <link rel="stylesheet" href="container-styles.css" />
+  <link rel="stylesheet" href="form.css" />
+</head>
+
+<body>
+
+  <ul class="container-nav-mobile">
+    <li><img src="./assets/headphones-icon.svg" class="icons" /><a href="#products">Productos</a></li>
+    <li><img src="./assets/tech-icon.svg" class="icons" /><a href="#tech">Tecnologia</a></li>
+    <li><img src="./assets/support-icon.svg" class="icons" /><a href="#support">Soporte</a></li>
+    <li><img src="./assets/contact-icon.svg" class="icons" /><a href="#contact">Contacto</a></li>
+  </ul>
+  <div class="header">
+    <div class="banner">
+      <small>ventas Viernes Negro - 50%</small>
+    </div>
     <div class="nav">
       <div class="logo">
         <label> NOS </label>
@@ -20,440 +34,630 @@
         <li><a href="#support">Soporte</a></li>
         <li><a href="#contact">Contacto</a></li>
       </ul>
-      <div class="container-search">
-        <input type="search" class="search-component" placeholder="Search" />
-        <div class="icon">
-          <img src="./assets/buscar.svg" alt="" />
+      <div class="container-login">
+        <div class="container-search">
+          <input type="search" class="search-component" placeholder="Search" />
+          <div class="icon">
+            <img src="./assets/buscar.svg" alt="" />
+          </div>
+        </div>
+        <div class="user-module">
+          <small class="welcome"></small>
+          <button color="gray2" onclick="logout()">Cerrar Sesion</button>
+        </div>
+        <div class="guest-module">
+          <a href="login.html"><button color="">Iniciar sesión</button></a>
+          <a href="register.html"><button color="white">Registrarse</button></a>
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="general-container">
-        <div class="container-portrait">
-          <div class="container-background">
-            <img src="./assets/fondo.jpg" alt="" />
+  </div>
+  <div class="container">
+    <div class="general-container">
+      <div class="container-portrait">
+        <div class="container-background">
+          <img src="./assets/fondo.jpg" alt="" />
+        </div>
+        <div class="container-person">
+          <img src="./assets/person.png" alt="" />
+        </div>
+        <div class="container-text display-1 startDown">
+          <h6>Mas que Audio</h6>
+        </div>
+        <div class="content-portrait">
+          <div class="explorer-container">
+            <small>
+              Revoluciona tu experiencia auditiva con sonido de alta
+              definición y tecnología inteligente que se adapta a ti.
+            </small>
+            <button color="white">Explorar productos</button>
           </div>
-          <div class="container-person">
-            <img src="./assets/person.png" alt="" />
-          </div>
-          <div class="container-text display-1"><h6>Mas que Audio</h6></div>
-          <div class="content-portrait">
-            <div class="explorer-container">
-              <small>
-                Revoluciona tu experiencia auditiva con sonido de alta
-                definición y tecnología inteligente que se adapta a ti.
-              </small>
-              <button color="white">Explorar productos</button>
-            </div>
-            <div class="container-card">
-              <div class="cart-portrait">
-                <img
-                  class="cart-image"
-                  src="./assets/nos-x1-pro.png"
-                  alt="Product Image"
-                />
-                <h3>NOS X1 Pro</h3>
-                <div class="footer">
-                  <p>Ver mas</p>
-                  <img src="./assets/flecha.svg" />
-                </div>
+          <div class="container-card">
+            <div class="cart-portrait">
+              <img class="cart-image" src="./assets/nos-x1-pro.png" alt="Product Image" />
+              <h3>NOS X1 Pro</h3>
+              <div class="footer">
+                <p>Ver mas</p>
+                <img src="./assets/flecha.svg" />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="container-paragraph">
-        <img src="./assets/headphones.png" alt="" />
-        <div class="display-2">
-          <span class="orange">NOS</span>
-          no solo crea audífonos, crea momentos.<span class="gray">
-            Vive la música con claridad, emoción y tecnología diseñada para ti.
-          </span>
-        </div>
+    </div>
+    <div class="container-paragraph">
+      <img src="./assets/headphones.png" class="down" />
+      <div class="display-2">
+        <span class="orange">NOS</span>
+        no solo crea audífonos, crea momentos.<span class="gray">
+          Vive la música con claridad, emoción y tecnología diseñada para ti.
+        </span>
       </div>
-      <div class="container-products">
-        <section id="products"></section>
-        <h1>Diseñados para sentir cada nota con claridad y emoción.</h1>
-        <div class="slider">
-          <div class="card-product">
-            <div class="new-item">
-              <small>Nuevo</small>
-            </div>
-            <div class="cover">
-              <img
-                class="cart-image"
-                src="./assets/NOS-Spek.png"
-                alt="Product Image"
-              />
-            </div>
-            <div class="description">
-              <strong>NOS Spek</strong>
-              <small>Premium Speaker</small>
-            </div>
+      <section id="products"></section>
+    </div>
+    <div class="container-products">
+
+      <h1>Diseñados para sentir cada nota con claridad y emoción.</h1>
+      <div class="slider">
+        <div class="card-product">
+          <div class="new-item">
+            <small>Nuevo</small>
           </div>
-          <div class="card-product">
-            <div class="cover">
-              <img
-                class="cart-image"
-                src="./assets/NOS-Os.png"
-                alt="Product Image"
-              />
-            </div>
-            <div class="description">
-              <strong>NOS Os</strong>
-              <small>Premium Speaker</small>
-            </div>
+          <div class="cover">
+            <img class="cart-image" src="./assets/NOS-Spek.png" alt="Product Image" />
           </div>
-          <div class="card-product">
-            <div class="cover">
-              <img
-                class="cart-image"
-                src="./assets/Z9-Pro-productos.png"
-                alt="Product Image"
-              />
-            </div>
-            <div class="description">
-              <strong>Z9 Pro</strong>
-              <small>Headphones Premium</small>
-            </div>
+          <div class="description">
+            <strong>NOS Spek</strong>
+            <small>Premium Speaker</small>
           </div>
-          <div class="card-product">
-            <div class="cover">
-              <img
-                class="cart-image"
-                src="./assets/NOS-Son 3.png"
-                alt="Product Image"
-              />
-            </div>
-            <div class="description">
-              <strong>NOS Son 3</strong>
-              <small>Premium Earphones</small>
-            </div>
+        </div>
+        <div class="card-product">
+          <div class="cover">
+            <img class="cart-image" src="./assets/NOS-Os.png" alt="Product Image" />
           </div>
-          <div class="card-product">
-            <div class="cover">
-              <img
-                class="cart-image"
-                src="./assets/X1-Pro-productos.png"
-                alt="Product Image"
-              />
-            </div>
-            <div class="description">
-              <strong>X1 Pro</strong>
-              <small>Premium Headphones</small>
-            </div>
+          <div class="description">
+            <strong>NOS Os</strong>
+            <small>Premium Speaker</small>
           </div>
-          <div class="card-product">
-            <div class="cover">
-              <img
-                class="cart-image"
-                src="./assets/Z11-Pro.png"
-                alt="Product Image"
-              />
-            </div>
-            <div class="description">
-              <strong>Z11 Pro</strong>
-              <small>Headphones Premium</small>
-            </div>
+        </div>
+        <div class="card-product">
+          <div class="cover">
+            <img class="cart-image" src="./assets/Z9-Pro-productos.png" alt="Product Image" />
+          </div>
+          <div class="description">
+            <strong>Z9 Pro</strong>
+            <small>Headphones Premium</small>
+          </div>
+        </div>
+        <div class="card-product">
+          <div class="cover">
+            <img class="cart-image" src="./assets/NOS-Son 3.png" alt="Product Image" />
+          </div>
+          <div class="description">
+            <strong>NOS Son 3</strong>
+            <small>Premium Earphones</small>
+          </div>
+        </div>
+        <div class="card-product">
+          <div class="cover">
+            <img class="cart-image" src="./assets/X1-Pro-productos.png" alt="Product Image" />
+          </div>
+          <div class="description">
+            <strong>X1 Pro</strong>
+            <small>Premium Headphones</small>
+          </div>
+        </div>
+        <div class="card-product">
+          <div class="cover">
+            <img class="cart-image" src="./assets/Z11-Pro.png" alt="Product Image" />
+          </div>
+          <div class="description">
+            <strong>Z11 Pro</strong>
+            <small>Headphones Premium</small>
           </div>
         </div>
       </div>
-      <div class="column-elements">
-        <div class="display-3 text" data-word="Sonido">
-          <div class="float-image float-image-activation">
-            <img src="./assets/sonido.jpg" alt="" />
-          </div>
-          Sonido
+    </div>
+    <div class="column-elements">
+      <div class="display-3 text" data-word="Sonido">
+        <div class="float-image float-image-activation">
+          <img src="./assets/sonido.jpg" alt="" />
         </div>
-        <div class="display-3 text" data-word="Premium">
-          <div class="float-image float-image-activation">
-            <img src="./assets/premium.jpg" alt="" />
-          </div>
-          Premium
+        Sonido
+      </div>
+      <div class="display-3 text" data-word="Premium">
+        <div class="float-image float-image-activation">
+          <img src="./assets/premium.jpg" alt="" />
         </div>
-        <div class="display-3 text" data-word="Tecnología">
-          <div class="float-image float-image-activation">
-            <img src="./assets/tecnologia.jpg" alt="" />
-          </div>
-          Tecnología
+        Premium
+      </div>
+      <div class="display-3 text" data-word="Tecnología">
+        <div class="float-image float-image-activation">
+          <img src="./assets/tecnologia.jpg" alt="" />
         </div>
-        <div class="display-3 text" data-word="Calidad">
-          <div class="float-image float-image-activation">
-            <img src="./assets/calidad.jpg" alt="" />
-          </div>
-          Calidad
+        Tecnología
+      </div>
+      <div class="display-3 text" data-word="Calidad">
+        <div class="float-image float-image-activation">
+          <img src="./assets/calidad.jpg" alt="" />
         </div>
-        <div class="display-3 text" data-word="Estilo">
-          <div class="float-image float-image-activation">
-            <img src="./assets/estilo.png" alt="" />
-          </div>
-          Estilo
+        Calidad
+      </div>
+      <div class="display-3 text" data-word="Estilo">
+        <div class="float-image float-image-activation">
+          <img src="./assets/estilo.png" alt="" />
         </div>
+        Estilo
       </div>
       <section id="tech"></section>
-      <div class="general-container">
-        <div class="container-tech">
-          <h1>
-            Calidad inigualable, funciones inteligentes, y tecnologías
-            innovadoras
-          </h1>
-          <div class="description">
+    </div>
+    <div class="general-container">
+      <div class="container-tech">
+        <h1>
+          Calidad inigualable, funciones inteligentes, y tecnologías
+          innovadoras
+        </h1>
+        <section id="tech"></section>
+        <div class="description">
+          <div class="tech-resume">
             <div class="title">
               <img src="./assets/calidad-de-sonido.svg" class="icons" alt="" />
-              <h3>Calidad de sonido</h3>
+              <h3 class="title-tech"></h3>
             </div>
             <div class="resume">
-              <small>
-                Revoluciona tu experiencia auditiva con sonido de alta
-                definición y tecnología inteligente que se adapta a ti.
+              <small class="desc-tech">
               </small>
             </div>
-            <div class="title">
-              <button class="btnPrev">
-                <img src="./assets/flecha-gris-isq.svg" class="icons" alt="" />
-              </button>
-              <button class="btnNext">
-                <img src="./assets/flecha-blanca-der.svg" class="icons" />
-              </button>
-            </div>
           </div>
-          <div class="slide">
-            <div class="item-slide">
-              <img src="./assets/X1-Pro-tecnologia.jpg" alt="" />
-            </div>
-            <div class="item-slide">
-              <img src="./assets/X1-Pro-tecnologia.jpg" alt="" />
-            </div>
-            <div class="item-slide active">
-              <img src="./assets/Z11-Pro-tecnologia.jpg" alt="" />
-            </div>
-            <div class="item-slide active">
-              <img src="./assets/Z11-Pro-tecnologia.jpg" alt="" />
-            </div>
+          <div class="title">
+            <button class="">
+              <img src="./assets/flecha-blanca-isq.svg" class="btnPrev" alt="" />
+            </button>
+            <button class="">
+              <img src="./assets/flecha-blanca-der.svg" class="btnNext btn-tech-active  " />
+            </button>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="item-slide ">
+          </div>
+          <div class="item-slide active">
+            <img src="./assets/X1-Pro-tecnologia.jpg" alt="" />
+          </div>
+          <div class="item-slide">
+            <img src="./assets/X1-Pro-tecnologia.jpg" alt="" />
+          </div>
+          <div class="item-slide">
+            <img src="./assets/X1-Pro-tecnologia.jpg" alt="" />
+          </div>
+          <div class="item-slide">
+            <img src="./assets/X1-Pro-tecnologia.jpg" alt="" />
+          </div>
+          <div class="item-slide">
+            <img src="./assets/Z11-Pro-tecnologia.jpg" alt="" />
+          </div>
+          <div class="item-slide ">
+            <img src="./assets/Z11-Pro-tecnologia.jpg" alt="" />
           </div>
         </div>
       </div>
-      <section id="support"></section>
-      <div class="general-container">
-        <div class="container-support">
-          <div class="display-2">
-            <span>Soporte <span class="orange">Nos</span></span>
+      <section id="support">
+      </section>
+    </div>
+    <div class="general-container">
+
+      <div class="container-support">
+        <div class="display-2 down">
+          <span>Soporte <span class="orange">Nos</span></span>
+        </div>
+
+        <div class="support-items ">
+          <div class="list-item blur">
+            <h4>Auriculares</h4>
+            <h3>CJ 7 Pro</h3>
+            <h3>CJ 7</h3>
+            <h3>Z11 Pro</h3>
+            <h3>Z9 Pro</h3>
+            <h3>X1 PRO</h3>
           </div>
-          <div class="support-items">
-            <div class="list-item">
-              <h4>Auriculares</h4>
-              <h3>CJ 7 Pro</h3>
-              <h3>CJ 7</h3>
-              <h3>Z11 Pro</h3>
-              <h3>Z9 Pro</h3>
-              <h3>X1 PRO</h3>
-            </div>
-            <div class="list-item">
-              <h4>Audífonos</h4>
-              <h3>NOS Z7 Fit</h3>
-              <h3>NOS U +</h3>
-              <h3>bd Buds 5 Pro</h3>
-              <h3>bd Buds 5</h3>
-              <h3>Pd Buds Pro</h3>
-              <h3>Pd Buds</h3>
-            </div>
-            <div class="list-item">
-              <h4>Altavoces</h4>
-              <h3>NOS Spek Pro</h3>
-              <h3>NOS Spek</h3>
-              <h3>NOS Os Ultra</h3>
-              <h3>NOS Os</h3>
-            </div>
+          <div class="list-item blur">
+            <h4>Audífonos</h4>
+            <h3>NOS Z7 Fit</h3>
+            <h3>NOS U +</h3>
+            <h3>bd Buds 5 Pro</h3>
+            <h3>bd Buds 5</h3>
+            <h3>Pd Buds Pro</h3>
+            <h3>Pd Buds</h3>
+          </div>
+          <div class="list-item blur">
+            <h4>Altavoces</h4>
+            <h3>NOS Spek Pro</h3>
+            <h3>NOS Spek</h3>
+            <h3>NOS Os Ultra</h3>
+            <h3>NOS Os</h3>
           </div>
         </div>
+        <!-- </div> -->
       </div>
-      <div class="container-questions">
-        <h1>Preguntas Frecuentes</h1>
-        <div class="question-item">
-          <h3>¿Cuánto dura la batería de mis audífonos o parlantes?</h3>
 
-          <img src="./assets/flecha-preguntas.svg" alt="" class="icons" />
-        </div>
-        <div class="question-item">
-          <h3>¿Cómo funciona la tecnología de cancelación de ruido?</h3>
 
-          <img src="./assets/flecha-preguntas.svg" alt="" class="icons" />
-        </div>
-        <div class="question-item">
-          <h3>¿Los productos son resistentes al agua y al sudor?</h3>
-
-          <img src="./assets/flecha-preguntas.svg" alt="" class="icons" />
-        </div>
-        <div class="question-item">
-          <h3>¿Realizan envíos internacionales?</h3>
-
-          <img src="./assets/flecha-preguntas.svg" alt="" class="icons" />
-        </div>
-        <div class="question-item">
-          <h3>¿Puedo rastrear mi pedido?</h3>
-
-          <img src="./assets/flecha-preguntas.svg" alt="" class="icons" />
-        </div>
+    </div>
+    <div class="container-questions">
+      <h1>Preguntas Frecuentes</h1>
+      <div class="question right">
+        <a class="btn-question" id="question-1">
+          <div class="question-item">
+            <h3>¿Cuánto dura la batería de mis audífonos o parlantes?</h3>
+            <img src="./assets/flecha-preguntas.svg" alt="" class="icons question-img" />
+          </div>
+        </a>
+        <small class="desc-question" id="desc-question-1">
+          La duración de la batería varía según el modelo y la marca, pero
+          generalmente es de 10 horas o más.
+        </small>
       </div>
-      <div class="services-container">
-        <h1>Servicio y Reparación</h1>
-        <div class="service-items">
-          <div class="items">
-            <img src="./assets/seguridad.svg" alt="" />
-            <h2>Consulta Tu Cobertura</h2>
-            <h3>
-              Inicia sesión con tu cuenta para consultar el estado de la
-              cobertura de tus auriculares
-            </h3>
-            <strong>Más Información</strong>
+      <div class="question right">
+        <a class="btn-question" id="question-2">
+          <div class="question-item">
+
+            <h3>¿Cómo funciona la tecnología de cancelación de ruido?</h3>
+
+            <img src="./assets/flecha-preguntas.svg" alt="" class="icons question-img" />
           </div>
-          <div class="items">
-            <img src="./assets/lupa-support.svg" alt="" />
-            <h2>Encuentra Tu Número De Serie</h2>
-            <h3>Aprende dónde encontrar el número de serie</h3>
-            <strong>Encontrar Número De Serie</strong>
-          </div>
-          <div class="items">
-            <img src="./assets/reparacion.svg" alt="" />
-            <h2>Opciones De Servicio</h2>
-            <h3>
-              Conozca sus opciones de servicio y reparación certificadas por NOS
-            </h3>
-            <strong>Más Información</strong>
-          </div>
-        </div>
+        </a>
+        <small class="desc-question" id="desc-question-2">
+          La tecnología de cancelación de ruido funciona eliminando el ruido
+          ambiental, permitiendo que solo pasen los sonidos deseados.
+        </small>
       </div>
-      <section id="contact"></section>
-      <div class="general-container">
-        <div class="container-contact">
-          <div class="contact">
-            <ul class="container-nav">
-              <li><a href="#products">Productos</a></li>
-              <li><a href="#tech">Tecnologia</a></li>
-              <li><a href="#support">Soporte</a></li>
-              <li><a href="#contact">Contacto</a></li>
-            </ul>
-            <h1>¿Tienes alguna consulta? Estamos aquí para ti</h1>
-            <div class="details">
-              <div class="item-details">
-                <p>TELEFONO</p>
-                <strong>+1800 1234 567</strong>
-              </div>
-              <div class="item-details">
-                <p>E-MAIL</p>
-                <strong>support@nos.com</strong>
-              </div>
-              <div class="item-details">
-                <p>DIRECCION</p>
-                <strong>Av. Ladrón de Guevara E11-253, Quito 170143</strong>
-              </div>
-            </div>
-            <div class="details">
-              <h3>Contáctanos y obtén asistencia personalizado</h3>
-              <div class="item-details">
-                <input
-                  type="email"
-                  class="email-component"
-                  placeholder="Email address"
-                />
-                <button color="black2">Enviar</button>
-              </div>
-            </div>
-            <div class="socials">
-              <img src="./assets/facebook.svg" alt="" />
-              <img src="./assets/instagram.svg" alt="" />
-              <img src="./assets/youtube.svg" alt="" />
-              <img src="./assets/linkedin.svg" alt="" />
-            </div>
+      <div class="question right">
+        <a class="btn-question" id="question-3">
+          <div class="question-item">
+
+            <h3>¿Los productos son resistentes al agua y al sudor?</h3>
+
+
+            <img src="./assets/flecha-preguntas.svg" alt="" class="icons question-img" />
           </div>
-          <div class="slider-poster">
-            <div class="slide-track">
-              <div class="poster">
-                <div class="details">
-                  <div>
-                    <h3>CJ 7 Pro</h3>
-                    <p>Headphones Premium</p>
-                  </div>
-                  <!-- <div class="see-more">
-                    <small>Ver especificaciones del producto</small>
-                    <div class="icon-putter">
-                      <img src="./assets/flecha.svg" alt="" />
-                    </div>
-                  </div> -->
-                </div>
-                <img src="./assets/CJ-7Pro.jpg" alt="" />
-              </div>
-              <div class="poster">
-                <div class="details">
-                  <div>
-                    <h3>CJ 7 Pro</h3>
-                    <p>Headphones Premium</p>
-                  </div>
-                  <!-- <div class="see-more">
-                    <small>Ver especificaciones del producto</small>
-                    <div class="icon-putter">
-                      <img src="./assets/flecha.svg" alt="" />
-                    </div>
-                  </div> -->
-                </div>
-                <img src="./assets/CJ-7Pro.jpg" alt="" />
-              </div>
-              <div class="poster">
-                <div class="details">
-                  <div>
-                    <h3>CJ 7 Pro</h3>
-                    <p>Headphones Premium</p>
-                  </div>
-                  <!-- <div class="see-more">
-                    <small>Ver especificaciones del producto</small>
-                    <div class="icon-putter">
-                      <img src="./assets/flecha.svg" alt="" />
-                    </div>
-                  </div> -->
-                </div>
-                <img src="./assets/CJ-7Pro.jpg" alt="" />
-              </div>
-            </div>
+        </a>
+        <small class="desc-question" id="desc-question-3">
+          Sí, nuestros productos son resistentes al agua y al sudor, lo que
+          los hace ideales para usos diarios.
+        </small>
+      </div>
+      <div class="question right">
+        <a class="btn-question" id="question-4">
+          <div class="question-item">
+
+            <h3>¿Realizan envíos internacionales?</h3>
+
+            <img src="./assets/flecha-preguntas.svg" alt="" class="icons question-img" />
           </div>
+        </a>
+        <small class="desc-question" id="desc-question-4">
+          Sí, realizamos envíos internacionales a todo el mundo.
+        </small>
+      </div>
+      <div class="question right">
+        <a class="btn-question" id="question-5">
+          <div class="question-item">
+
+            <h3>¿Puedo rastrear mi pedido?</h3>
+
+
+            <img src="./assets/flecha-preguntas.svg" alt="" class="icons question-img" />
+          </div>
+        </a>
+        <small class="desc-question" id="desc-question-5">
+          Sí, puedes rastrear tu pedido ingresando el número de seguimiento
+          proporcionado en la confirmación de compra.
+        </small>
+      </div>
+    </div>
+    <div class="services-container">
+      <h1>Servicio y Reparación</h1>
+      <div class="service-items">
+        <div class="items down">
+          <img src="./assets/seguridad.svg" alt="" />
+          <h2>Consulta Tu Cobertura</h2>
+          <h3>
+            Inicia sesión con tu cuenta para consultar el estado de la
+            cobertura de tus auriculares
+          </h3>
+          <strong>Más Información</strong>
+        </div>
+        <div class="items down">
+          <img src="./assets/lupa-support.svg" alt="" />
+          <h2>Encuentra Tu Número De Serie</h2>
+          <h3>Aprende dónde encontrar el número de serie</h3>
+          <strong>Encontrar Número De Serie</strong>
+        </div>
+        <div class="items down">
+          <img src="./assets/reparacion.svg" alt="" />
+          <h2>Opciones De Servicio</h2>
+          <h3>
+            Conozca sus opciones de servicio y reparación certificadas por NOS
+          </h3>
+          <strong>Más Información</strong>
         </div>
       </div>
     </div>
-    <script>
-      const slider = document.querySelector(".slide");
-      const customHeight = document.querySelector(".active");
-      const slides = Array.from(slider.children);
-      const items = document.querySelectorAll(".item-slide ");
-      let index = 0;
-      slider.style.height = customHeight.offsetHeight + "px";
-      function updateActive() {
-        items.forEach((item, i) => {
-          // console.log(item, i);
-          if (i === index) {
-            item.classList.add("active");
-          } else {
-            item.classList.remove("active");
-          }
-        });
-      }
-      document.querySelector(".btnNext").onclick = () => {
-        index = Math.min(index + 1, slides.length - 1);
-         updateActive()
-        slides[index].scrollIntoView({
-          behavior: "smooth",
-          block: "nearest",
-          inline: "start",
-        });
-      };
+    <div class="general-container">
+      <div class="container-contact">
+        <div class="contact">
+          <section id="contact"></section>
+          <ul class="container-nav">
+            <li><a href="#products">Productos</a></li>
+            <li><a href="#tech">Tecnologia</a></li>
+            <li><a href="#support">Soporte</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+          <h1>¿Tienes alguna consulta? Estamos aquí para ti</h1>
+          <div class="details">
+            <div class="item-details">
+              <p>TELEFONO</p>
+              <strong>+593 1234 567</strong>
+            </div>
+            <div class="item-details">
+              <p>E-MAIL</p>
+              <strong>support@nos.com</strong>
+            </div>
+            <div class="item-details">
+              <p>DIRECCION</p>
+              <strong>Av. Ladrón de Guevara E11-253, Quito 170143</strong>
+            </div>
+          </div>
+          <div class="details">
+            <h3>Contáctanos y obtén asistencia personalizado</h3>
+            <div class="item-details">
+              <input type="email" class="input-component input-white" placeholder="Email address" />
+              <button color="black2">Enviar</button>
+            </div>
+          </div>
+          <div class="socials desktop">
+            <img src="./assets/facebook.svg" alt="" />
+            <img src="./assets/instagram.svg" alt="" />
+            <img src="./assets/youtube.svg" alt="" />
+            <img src="./assets/linkedin.svg" alt="" />
+          </div>
+        </div>
+        <div class="slider-poster">
+          <div class="slide-track" id="poster-carousel">
+            <div class="poster">
+              <div class="details">
+                <div>
+                  <h3>CJ 7 Pro</h3>
+                  <p>Headphones Premium</p>
+                </div>
+              </div>
+              <img src="./assets/CJ-7Pro.jpg" alt="" />
+            </div>
+            <div class="poster">
+              <div class="details">
+                <div>
+                  <h3>CJ 7</h3>
+                  <p>Headphones Premium</p>
+                </div>
 
-      document.querySelector(".btnPrev").onclick = () => {
-        index = Math.max(index - 1, 0);\
-         updateActive()
-        slides[index].scrollIntoView({
-          behavior: "smooth",
-          block: "nearest",
-          inline: "start",
-        });
+              </div>
+              <img src="./assets/CJ-7.jpg" alt="" />
+            </div>
+            <div class="poster">
+              <div class="details">
+                <div>
+                  <h3>Z9 Pro</h3>
+                  <p>Headphones Premium</p>
+                </div>
+
+              </div>
+              <img src="./assets/Z9-Pro.jpg" alt="" />
+            </div>
+            <div class="poster">
+              <div class="details">
+                <div>
+                  <h3>CJ 7 Pro</h3>
+                  <p>Headphones Premium</p>
+                </div>
+              </div>
+              <img src="./assets/CJ-7Pro.jpg" alt="" />
+            </div>
+            <div class="poster">
+              <div class="details">
+                <div>
+                  <h3>CJ 7</h3>
+                  <p>Headphones Premium</p>
+                </div>
+
+              </div>
+              <img src="./assets/CJ-7.jpg" alt="" />
+            </div>
+            <div class="poster">
+              <div class="details">
+                <div>
+                  <h3>Z9 Pro</h3>
+                  <p>Headphones Premium</p>
+                </div>
+
+              </div>
+              <img src="./assets/Z9-Pro.jpg" alt="" />
+            </div>
+          </div>
+
+        </div>
+        <div class="socials mobile">
+          <img src="./assets/facebook.svg" alt="" />
+          <img src="./assets/instagram.svg" alt="" />
+          <img src="./assets/youtube.svg" alt="" />
+          <img src="./assets/linkedin.svg" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const slider = document.querySelector(".slide");
+    const questions = document.querySelector(".desc-question");
+    const customHeight = document.querySelector(".active");
+    const slides = Array.from(slider.children);
+    const arrayQuestions = Array.from(questions.children);
+    const tituloDiv = document.querySelector('.title-tech');
+    const descDiv = document.querySelector('.desc-tech');
+    const btnNext = document.querySelector('.btnNext');
+    const btnPrev = document.querySelector('.btnPrev');
+    const userModule = document.querySelector('.user-module');
+    const guestModule = document.querySelector('.guest-module');
+    const welcome = document.querySelector('.welcome');
+    const accordionButton = document.querySelectorAll(".btn-question");
+    const CAROUSEL_ID = 'poster-carousel';
+    const DURATION = 25;
+    const dataTech = [
+      {
+        title: "Tecnologia 1",
+        desc: "Descripcion de la tecnologia 1"
+      },
+      {
+        title: "Tecnologia 2",
+        desc: "Descripcion de la tecnologia 2"
+      },
+      {
+        title: "Tecnologia 3",
+        desc: "Descripcion de la tecnologia 3"
+      },
+      {
+        title: "Tecnologia 4",
+        desc: "Descripcion de la tecnologia 4"
+      },
+      {
+        title: "Tecnologia 5",
+        desc: "Descripcion de la tecnologia 5"
+      },
+    ]
+    tituloDiv.textContent = dataTech[0].title;
+    descDiv.textContent = dataTech[0].desc;
+    const mobile = window.innerWidth <= 900
+    let index = mobile ? 0 : 1;
+    mobile && slides.shift();
+    slider.style.height !== 0 && !mobile ? slider.style.height = customHeight.offsetHeight + "px" : mobile && (slider.style.height = (customHeight.offsetHeight + slides[0].offsetHeight + 20) + "px")
+    function updateActive() {
+      slides.forEach((item, i) => {
+        if (i === index) {
+          item.classList.add("active");
+        } else {
+          item.classList.remove("active");
+        }
+      });
+    }
+    function setupInfiniteCarousel() {
+      const track = document.querySelector(`#${CAROUSEL_ID}`);
+      if (!track) return;
+
+      const allPosters = Array.from(track.children);
+
+      const originalSetLength = allPosters.length / 2;
+
+      let displacement = 0;
+
+      allPosters.slice(0, originalSetLength).forEach(poster => {
+    
+        displacement += poster.offsetWidth + 10;
+      });
+
+      const keyframes = `
+    @keyframes scrollX {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-${displacement}px); }
+    }
+  `;
+
+      const styleSheet = document.createElement('style');
+      styleSheet.type = 'text/css';
+      styleSheet.innerText = keyframes;
+      document.head.appendChild(styleSheet);
+
+      track.style.animation = `scrollX ${DURATION}s linear infinite`;
+
+      track.style.width = `${displacement * 2}px`;
+      track.style.display = 'flex';
+    }
+    function updateTextContent(currentIndex) {
+      const data = dataTech[currentIndex - 1];
+      const container = document.querySelector('.tech-resume');
+      if (data) {
+        container.classList.add("tech-resume-gonna-change");
+        setTimeout(() => {
+          tituloDiv.textContent = data.title;
+          descDiv.textContent = data.desc;
+          container.classList.remove("tech-resume-gonna-change");
+        }, 400); 
+      }
+    }
+    accordionButton.forEach(button => {
+      let initialState = false
+      const questionItem = document.getElementById(`desc-${button.id}`);
+      const fixedHeight = questionItem.offsetHeight
+      questionItem.style.height = "0px";
+      button.onclick = (e) => {
+        const questionImg = button.querySelector('.question-img');
+
+        if (initialState) {
+          questionItem.style.height = "0px";
+          questionImg.style.transform = "rotate(-180deg)";
+        } else {
+          questionItem.style.height = fixedHeight + "px";
+          questionImg.style.transform = "rotate(0)";
+        }
+        initialState = !initialState
       };
-    </script>
-  </body>
+    });
+    document.querySelector(".btnNext").onclick = () => {
+      if (index >= slides.length - 1) return;
+      if (index >= slides.length - 2) btnNext.classList.remove('btn-tech-active');
+      index = Math.min(index + 1, slides.length - 1);
+      updateActive();
+      btnPrev.classList.add('btn-tech-active')
+      updateTextContent(index);
+      slides[index].scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "end"
+      });
+    };
+    const slideWidth = slides[0].clientWidth;
+    document.querySelector(".btnPrev").onclick = () => {
+      if (index < (mobile ? 1 : 2)) return;
+      if (index <= (mobile ? 1 : 2)) btnPrev.classList.remove('btn-tech-active');
+      btnNext.classList.add('btn-tech-active');
+      index = Math.max(index - 1, 0);
+      updateActive()
+      updateTextContent(index);
+      slides[index - 1].scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: mobile ? "end" : "start"
+      });
+
+
+    };
+    const tokenRecuperado = localStorage.getItem('userProfile');
+
+    if (tokenRecuperado) {
+      console.log("Token de sesión:", JSON.parse(tokenRecuperado));
+      userModule.style.display = 'flex';
+      guestModule.style.display = 'none';
+      welcome.textContent = `Hola, ${JSON.parse(tokenRecuperado).username}`;
+    } else {
+      console.log("No se encontró ningún token.");
+      userModule.style.display = 'none';
+      guestModule.style.display = 'flex';
+    }
+    function logout() {
+      localStorage.removeItem('userProfile');
+      userModule.style.display = 'none';
+      guestModule.style.display = 'flex';
+      welcome.textContent = '';
+      window.location.reload();
+    }
+    document.addEventListener('DOMContentLoaded', setupInfiniteCarousel);
+  </script>
+</body>
+
 </html>

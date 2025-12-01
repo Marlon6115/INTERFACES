@@ -4,17 +4,22 @@
   position: relative;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  margin-top: 7rem;
+}
+
 .container-text h6 {
   font-size: var(--text-9xl);
   overflow: hidden;
- 
+
   word-spacing: 0.5rem;
-  background: radial-gradient(
-    rgba(255, 255, 255, 0.9),
-    rgba(255, 255, 255, 0.8),
-    rgb(255, 255, 255, 0.2),
-    rgba(255, 255, 255, 0)
-  );
+  background: radial-gradient(rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.8),
+      rgb(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -42,6 +47,7 @@
   align-items: end;
   width: 100%;
 }
+
 .container-portrait {
   height: auto;
   position: relative;
@@ -53,32 +59,41 @@
   flex-direction: column;
   width: 100%;
 }
+
 .container-card {
   position: relative;
 }
+
 .container-background img {
-  width: auto;
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .container-background {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 0;
+  width: 100dvw;
+  height: 100%;
 }
+
 .container-person img {
   width: auto;
   height: 60rem;
   object-fit: cover;
 }
+
 .container-person {
   position: absolute;
   z-index: 2;
 }
-.menu{
-    height: 10rem;
+
+.menu {
+  height: 10rem;
 }
+
 @media (max-width: 600px) {
   .content-portrait {
     flex-direction: column;
@@ -86,23 +101,27 @@
     gap: 2rem;
     margin-top: var(--text-9xl);
   }
+
   .explorer-container {
     order: 2;
   }
+
   .container-text {
     margin-top: 2rem;
     position: absolute;
   }
+
   .container-person {
     bottom: 0;
   }
 
   .container-text h6 {
-    line-height: 1.4; 
-    margin-bottom: 3rem; 
-    letter-spacing: 0.15rem; 
-     white-space: inherit;
+    line-height: 1.4;
+    margin-bottom: 3rem;
+    letter-spacing: 0.15rem;
+    white-space: inherit;
   }
+
   .container-person img {
     height: 45rem;
   }
