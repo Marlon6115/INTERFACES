@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link href="./output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body
+    class="w-full h-screen font-poppins text-secondary overflow-hidden flex flex-col justify-center items-center bg-primary"
+  >
+    <div
+      class="flex flex-col w-full h-full justify-center items-center text-center"
+    >
+      <div
+        class="relative flex flex-col p-8 sm:p-[2rem_4rem] bg-secondary rounded-[3rem] shadow-[1rem_1rem_2rem_#cecece] gap-8 w-min"
+      >
+        <a class="absolute left-8 top-6" href="javascript:history.back()">
+          <img
+            src="./assets/flecha-blanca-isq.svg"
+            class="h-6 w-auto object-cover invert hover:opacity-80 transition-opacity"
+            alt="Volver"
+          />
+        </a>
+
+        <div class="flex flex-col gap-8 text-primary">
+          <div class="font-['Arial'] italic text-lg">
+            <label> NOS </label>
+          </div>
+
+          <h2
+            class="text-[1.875rem] font-medium font-poppins-medium text-primary"
+          >
+            Iniciar sesión
+          </h2>
+
+          <form class="flex flex-col gap-4 relative w-full items-form">
+            <input
+              type="email"
+              class="relative outline-none px-3 py-2 text-sm bg-transparent border-b border-secondary-gray2 transition-all duration-200 w-full h-min appearance-none text-primary placeholder:text-secondary-gray2 focus:border-white"
+              placeholder="Correo"
+              required
+              minlength="6"
+            />
+
+            <div class="relative w-full">
+              <input
+                type="password"
+                class="relative outline-none px-3 py-2 text-sm bg-transparent border-b border-secondary-gray2 transition-all duration-200 w-full h-min appearance-none text-primary placeholder:text-secondary-gray2 focus:border-white pr-8"
+                placeholder="Contraseña"
+                required
+                minlength="6"
+                id="password-input"
+              />
+              <button
+                class="absolute right-1 top-1/2 -translate-y-1/2 z-10 cursor-pointer bg-transparent border-none"
+                id="show-password"
+                type="button"
+              >
+                <img
+                  src="./assets/eye1.svg"
+                  alt=""
+                  class="w-4 h-4 show block"
+                />
+                <img
+                  src="./assets/eye2.svg"
+                  alt=""
+                  class="w-4 h-4 hidden-icon hidden"
+                />
+              </button>
+            </div>
+
+            <small
+              class="text-right text-secondary-gray2 error-message h-4"
+            ></small>
+
+            <div
+              class="flex justify-between items-center gap-8 text-right w-full"
+            >
+              <div class="flex gap-2 items-center">
+                <input type="checkbox" class="w-4 accent-secondary-orange" />
+                <small class="text-secondary-gray2">Recordar contraseña</small>
+              </div>
+              <small>
+                <a
+                  href="/register/register.html"
+                  class="text-secondary-gray2 hover:text-secondary-orange transition-colors"
+                  >Olvidaste tu contraseña?</a
+                >
+              </small>
+            </div>
+
+            <div class="mt-8">
+              <input
+                type="submit"
+                value="Iniciar sesión"
+                class="bg-white text-secondary text-base font-poppins border-none px-6 py-3 rounded-[5rem] cursor-pointer transition-all duration-400 hover:bg-secondary-gray2 active:scale-95 whitespace-nowrap w-min mx-auto block"
+              />
+            </div>
+          </form>
+
+          <small class="text-secondary-gray2">
+            ¿No tienes cuenta?
+            <a
+              href="/register/register.html"
+              class="text-secondary-orange-bright hover:text-secondary-orange transition-colors"
+              >Regístrate aquí</a
+            >
+          </small>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

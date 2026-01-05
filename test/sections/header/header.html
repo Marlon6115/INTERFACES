@@ -1,0 +1,66 @@
+<div class="flex flex-col z-30 font-poppins text-secondary">
+  <div class="bg-secondary w-full fixed top-0 z-40 shadow-[0_0.5rem_1rem_0_rgba(0,0,0,0.3)] text-center py-0.5">
+    <small class="text-white text-xs sm:text-sm">ventas Viernes Negro - 50%</small>
+  </div>
+
+  <div class="grid grid-cols-3 w-[calc(100%-1rem)] justify-between p-4 items-center fixed top-6 z-30 gap-4 bg-white max-[900px]:flex max-[900px]:justify-between max-[900px]:px-4 max-[900px]:py-2">
+    
+    <div class="font-['Arial'] italic text-lg">
+      <label>NOS</label>
+    </div>
+
+    <ul class="flex justify-center gap-4 h-min max-[900px]:hidden">
+      <li class="relative group pb-1 cursor-pointer">
+        <a href="#products" class="no-underline text-secondary group-hover:text-secondary-orange transition-colors">Productos</a>
+        <span class="absolute left-0 right-0 bottom-0 h-[0.1rem] bg-secondary-orange scale-x-0 origin-left transition-transform duration-250 group-hover:scale-x-100 group-focus-within:scale-x-100"></span>
+      </li>
+      <li class="relative group pb-1 cursor-pointer">
+        <a href="#tech" class="no-underline text-secondary group-hover:text-secondary-orange transition-colors">Tecnologia</a>
+        <span class="absolute left-0 right-0 bottom-0 h-[0.1rem] bg-secondary-orange scale-x-0 origin-left transition-transform duration-250 group-hover:scale-x-100 group-focus-within:scale-x-100"></span>
+      </li>
+      <li class="relative group pb-1 cursor-pointer">
+        <a href="#support" class="no-underline text-secondary group-hover:text-secondary-orange transition-colors">Soporte</a>
+        <span class="absolute left-0 right-0 bottom-0 h-[0.1rem] bg-secondary-orange scale-x-0 origin-left transition-transform duration-250 group-hover:scale-x-100 group-focus-within:scale-x-100"></span>
+      </li>
+      <li class="relative group pb-1 cursor-pointer">
+        <a href="#contact" class="no-underline text-secondary group-hover:text-secondary-orange transition-colors">Contacto</a>
+        <span class="absolute left-0 right-0 bottom-0 h-[0.1rem] bg-secondary-orange scale-x-0 origin-left transition-transform duration-250 group-hover:scale-x-100 group-focus-within:scale-x-100"></span>
+      </li>
+    </ul>
+
+    <div class="flex gap-8 justify-end items-center max-[900px]:gap-2">
+      
+      <div class="relative flex items-center justify-end">
+        <input 
+          type="search" 
+          class="w-36 px-3 py-2 text-sm border border-secondary-gray2 rounded-[2rem] transition-all duration-200 outline-none appearance-none placeholder:text-secondary-gray focus:border-secondary-gray focus:w-48 max-[900px]:w-28 max-[900px]:focus:w-32" 
+          placeholder="Search" 
+        />
+        <div class="absolute top-2 right-3 pointer-events-none">
+          <img src="./assets/buscar.svg" alt="" class="w-4 h-auto" />
+        </div>
+      </div>
+
+      <div class="user-module hidden items-center gap-8">
+        <small class="welcome text-sm font-medium"></small>
+        <button id="logout" class="px-4 py-2 text-sm border-b-2 border-secondary-orange bg-transparent text-secondary-gray rounded-none hover:text-secondary transition-colors cursor-pointer">
+          Cerrar Sesion
+        </button>
+      </div>
+
+      <div class="guest-module flex items-center gap-2">
+        <a href="/login/login.html">
+          <button class="bg-black text-primary px-6 py-3 border-none rounded-[5rem] cursor-pointer text-sm font-poppins transition-transform duration-400 hover:opacity-90 active:scale-95 whitespace-nowrap max-[900px]:p-2 max-[900px]:text-xs">
+            Iniciar sesión
+          </button>
+        </a>
+        <a href="/register/register.html">
+          <button class="bg-white text-secondary px-4 py-3 border-none rounded-[5rem] cursor-pointer text-base font-poppins transition-all duration-400 hover:bg-secondary-gray2 active:scale-95 whitespace-nowrap max-[900px]:p-2 max-[900px]:text-xs">
+            Registrarse
+          </button>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>

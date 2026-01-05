@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fuentes Personalizadas */
+@layer base {
+  @font-face { font-family: "Poppins-Regular"; src: url("assets/font/Poppins/Poppins-Regular.ttf"); }
+  @font-face { font-family: "Poppins-Light"; src: url("assets/font/Poppins/Poppins-Light.ttf"); }
+  @font-face { font-family: "Poppins-Medium"; src: url("assets/font/Poppins/Poppins-Medium.ttf"); }
+  @font-face { font-family: "Poppins-SemiBold"; src: url("assets/font/Poppins/Poppins-SemiBold.ttf"); }
+  @font-face { font-family: "Poppins-Bold"; src: url("assets/font/Poppins/Poppins-Bold.ttf"); }
+  @font-face { font-family: "Poppins-Black"; src: url("assets/font/Poppins/Poppins-Black.ttf"); }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-poppins text-secondary overflow-x-hidden;
+  }
+}
+
+/* Estilos de Scrollbar (Copiados de tu style.css) */
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-secondary-orange rounded-[70rem];
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #666;
+  }
+  
+  /* Gradiente de texto específico de container-styles.css */
+  .text-gradient-custom {
+    background: radial-gradient(rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.8),
+      rgb(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}

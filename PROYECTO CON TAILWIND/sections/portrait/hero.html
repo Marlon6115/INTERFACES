@@ -1,0 +1,73 @@
+<div class="p-2 relative">
+  <div
+    class="relative overflow-hidden flex flex-col justify-center items-center w-full h-auto rounded-[2rem]"
+  >
+    <div class="absolute top-0 left-0 z-0 w-screen h-full">
+      <img src="./assets/fondo.jpg" alt="" class="w-full h-full object-cover" />
+    </div>
+
+    <div class="absolute z-[2] bottom-0">
+      <img
+        src="./assets/person.png"
+        alt=""
+        class="w-auto object-cover h-[45rem] min-[600px]:h-[60rem]"
+      />
+    </div>
+
+    <div
+      class="z-[1] relative mt-8 absolute min-[600px]:relative min-[600px]:mt-[17rem]"
+    >
+      <h6
+        class="font-medium overflow-hidden text-[3rem] leading-[1.4] tracking-[0.15rem] whitespace-normal mb-12 min-[600px]:text-[11rem] min-[600px]:whitespace-nowrap min-[600px]:mb-0 min-[600px]:tracking-normal min-[600px]:leading-normal bg-[radial-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.8),rgba(255,255,255,0.2),rgba(255,255,255,0))] bg-clip-text text-transparent word-spacing-[0.5rem]"
+      >
+        Mas que Audio
+      </h6>
+    </div>
+
+    <div
+      class="z-[2] flex flex-col items-center gap-8 mt-[11rem] p-6 w-full min-[600px]:flex-row min-[600px]:justify-between min-[600px]:items-end min-[600px]:mt-0 min-[600px]:gap-0 min-[600px]:py-10 min-[600px]:px-6"
+    >
+      <div class="flex flex-col gap-8 w-fit order-2 min-[600px]:order-none">
+        <small
+          class="text-[#fefdff] text-[0.875rem] font-[100] max-w-[18rem] leading-[0.875rem]"
+        >
+          Revoluciona tu experiencia auditiva con sonido de alta definición y
+          tecnología inteligente que se adapta a ti.
+        </small>
+        <button
+          class="bg-white text-[#111113] text-[1rem] border-none px-6 py-3 rounded-[5rem] cursor-pointer transition-all duration-400 hover:opacity-90 active:scale-95 w-max font-sans whitespace-nowrap"
+        >
+          Explorar productos
+        </button>
+      </div>
+      <div class="relative">
+        <div class="flex flex-col p-[1.125rem] bg-white rounded-[1rem]">
+          <img
+            class="w-[10rem] object-cover h-[10rem] bg-[#f5f5f5] rounded-[1rem] p-6"
+            src="./assets/nos-x1-pro.png"
+            alt="Product Image"
+          />
+          <h3 class="text-left mt-4 text-[1.5rem] font-medium text-[#111113]">
+            NOS X1 Pro
+          </h3>
+          <button
+            data-product='{
+    "img": "./assets/nos-x1-pro.png",
+    "title": "     NOS X1 Pro",
+    "subtitle": "Premium Speaker",
+    "description": "Revoluciona tu experiencia auditiva con sonido de alta definición ytecnología inteligente que se adapta a ti.",
+     "newState": false
+  }'
+            class="flex justify-between items-center flex-1 mt-2 openModal"
+          >
+            <p class="text-[#111113] text-[1rem]">Ver mas</p>
+            <img
+              src="./assets/flecha.svg"
+              class="h-[1.5rem] w-auto object-cover rotate-180"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
