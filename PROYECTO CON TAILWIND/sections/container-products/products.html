@@ -1,4 +1,6 @@
 <div class="openModal">
+  <section id="products" class="absolute -top-20"></section>
+
   <div class="overflow-hidden">
     <h1
       class="px-4 mb-8 font-semibold text-[#111113] text-[1.875rem] min-[900px]:text-[3.25rem]"
@@ -6,22 +8,18 @@
       Diseñados para sentir cada nota con claridad y emoción.
     </h1>
     <style>
-      /* Altura de la barra horizontal */
       .custom-scrollbar::-webkit-scrollbar {
         overflow-x: scroll;
         overflow-y: hidden;
       }
-      /* Fondo de la barra (transparente) */
       .custom-scrollbar::-webkit-scrollbar-track {
         background: transparent;
-        margin: 0 60px; /* Margen para que no toque los bordes */
+        margin: 0 60px;
       }
-      /* El "dedo" o barra que se mueve (Naranja) */
       .custom-scrollbar::-webkit-scrollbar-thumb {
         background-color: #e04622;
         border-radius: 20px;
       }
-      /* Color al pasar el mouse por encima */
       .custom-scrollbar::-webkit-scrollbar-thumb:hover {
         background-color: #c93e1e;
       }
@@ -85,6 +83,13 @@
             class="absolute inset-0 z-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
           >
             <button
+              data-product='{
+    "img": "/assets/NOS-Os.png",
+    "title": "     NOS Os",
+    "subtitle": "Premium Speaker",
+    "description": "Revoluciona tu experiencia auditiva con sonido de alta definición ytecnología inteligente que se adapta a ti.",
+    "newState": false
+  }'
               class="openModal bg-white text-[#111113] text-base px-8 py-3 rounded-[5rem] shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#cecece] active:scale-95 cursor-pointer border-none whitespace-nowrap"
             >
               Ver más
@@ -112,6 +117,13 @@
             class="absolute inset-0 z-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
           >
             <button
+              data-product='{
+    "img": "/assets/Z9-Pro-productos.png",
+    "title": "     Z9 Pro",
+    "subtitle": "Headphones Premium",
+    "description": "Revoluciona tu experiencia auditiva con sonido de alta definición ytecnología inteligente que se adapta a ti.",
+    "newState": false
+  }'
               class="openModal bg-white text-[#111113] text-base px-8 py-3 rounded-[5rem] shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#cecece] active:scale-95 cursor-pointer border-none whitespace-nowrap"
             >
               Ver más
@@ -141,6 +153,13 @@
             class="absolute inset-0 z-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
           >
             <button
+              data-product='{
+    "img": "/assets/NOS-Son-3.png",
+    "title": "     NOS Son 3",
+    "subtitle": "Premium Earphones",
+    "description": "Revoluciona tu experiencia auditiva con sonido de alta definición ytecnología inteligente que se adapta a ti.",
+    "newState": false
+  }'
               class="openModal bg-white text-[#111113] text-base px-8 py-3 rounded-[5rem] shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#cecece] active:scale-95 cursor-pointer border-none whitespace-nowrap"
             >
               Ver más
@@ -170,6 +189,13 @@
             class="absolute inset-0 z-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
           >
             <button
+              data-product='{
+    "img": "/assets/X1-Pro-productos.png",
+    "title": "     X1 Pro",
+    "subtitle": "Premium Headphones",
+    "description": "Revoluciona tu experiencia auditiva con sonido de alta definición ytecnología inteligente que se adapta a ti.",
+    "newState": false
+  }'
               class="openModal bg-white text-[#111113] text-base px-8 py-3 rounded-[5rem] shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#cecece] active:scale-95 cursor-pointer border-none whitespace-nowrap"
             >
               Ver más
@@ -199,6 +225,13 @@
             class="absolute inset-0 z-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300"
           >
             <button
+              data-product='{
+    "img": "/assets/Z11-Pro.png",
+    "title": "     Z11 Pro",
+    "subtitle": "Headphones Premium",
+    "description": "Revoluciona tu experiencia auditiva con sonido de alta definición ytecnología inteligente que se adapta a ti.",
+    "newState": false
+  }'
               class="openModal bg-white text-[#111113] text-base px-8 py-3 rounded-[5rem] shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-[#cecece] active:scale-95 cursor-pointer border-none whitespace-nowrap"
             >
               Ver más
